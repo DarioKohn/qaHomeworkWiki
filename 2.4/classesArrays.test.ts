@@ -27,7 +27,7 @@ let employees: Array<Employees> = [
 const addEmployee: By = By.name("addEmployee");
 const newEmployee: By = By.xpath('//li[text() = "New Employee"]');
 const nameInput: By = By.name("nameEntry");
-const phoneInput: By = By.name("phoneEntry");
+const phoneInput: By = By.xpath('(//input[@class="materialInput"])[2]');
 const titleInput: By = By.name('titleEntry');
 const saveBtn: By = By.id("saveBtn");
 
