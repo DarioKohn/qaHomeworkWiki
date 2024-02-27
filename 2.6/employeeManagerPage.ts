@@ -1,18 +1,18 @@
 import {By, until, WebDriver} from 'selenium-webdriver';
 
-export class EmployeePage {
+export class EmployeeManagerPage {
     driver: WebDriver;
     url: string = "https://devmountain-qa.github.io/employee-manager/1.2_Version/index.html";
 
-    bernice: By = By.name('employee1');
-    name: By = By.name('nameEntry');
-    addEmployee: By = By.name('addEmployee');
-    newEmployee: By = By.xpath('//li[text()="New Employee"]');
-    phone: By = By.name('phoneEntry');
-    title: By = By.name('titleEntry');
-    phillip: By = By.name('employee3');
-    saveBtn: By = By.id('saveBtn');
-    employeeName: By = By.name('employeeName');
+    BerniceOrtiz: By = By.name('employee1');
+    Name: By = By.name('nameEntry');
+    AddEmployee: By = By.name('addEmployee');
+    NewEmployee: By = By.xpath('//li[text()="New Employee"]');
+    PhoneNumber: By = By.name('phoneEntry');
+    Title: By = By.name('titleEntry');
+    PhillipWeaver: By = By.name('employee3');
+    SaveButton: By = By.id('saveBtn');
+    EmployeeName: By = By.name('employeeName');
 
     constructor(driver: WebDriver) {
         this.driver = driver;
@@ -20,7 +20,7 @@ export class EmployeePage {
 
     async navigate() {
         await this.driver.get(this.url);
-        await this.driver.wait(until.elementLocated(this.bernice));
+        await this.driver.wait(until.elementLocated(this.BerniceOrtiz));
     };
     async click(elementBy: By) {
         await this.driver.wait(until.elementLocated(elementBy));
